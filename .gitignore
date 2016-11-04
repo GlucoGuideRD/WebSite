@@ -1,0 +1,8 @@
+# iOS / Apple
+# ===========
+.DS_Store
+
+# IntelliJ
+# ========
+*.iml
+.idea/
