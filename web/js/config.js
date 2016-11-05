@@ -69,7 +69,7 @@ $(window).load(function () {
      * NAVBAR INIT
      * ************************************************************** */
 
-    $(".button-collapse").sideNav();
+    // $(".button-collapse").sideNav();
 
 
     /* *****************************************************************
@@ -185,28 +185,40 @@ $(window).load(function () {
 
         function init() {
             $trigger.on('click', showGrid);
-            $screens.on('click', function () {
-                showScreen($(this));
-                return false;
+            $screens.on('mouseover',function(){
+                     // showScreen($(this));
+                     setTimeout(showScreen.bind($(this)),1000);
+                     return false;
             });
         }
 
         function showGrid() {
             $el.addClass('feature-gridview');
-            $body.off('click').on('click', function () {
-                showScreen();
-            });
+             $body.off('click').on('click', function () {
+                 showScreen();
+             });
+
             return false;
         }
 
-        function showScreen($screen) {
+        // function showScreen($screen) {
+        //     $el.removeClass('feature-gridview');
+        //     if ($screen) {
+        //         $screenImg.attr('src', $screen.find('img').attr('src'));
+        //         $('.features-section-box i').removeClass('red-text');
+        //         var box_num = $screen.find('img').attr('data-num');
+        //         $('.features-section-box.' + box_num + ' i').addClass('red-text');
+        //         $screenTitle.text($screen.find('span').text());
+        //     }
+        // }
+        function showScreen() {
             $el.removeClass('feature-gridview');
-            if ($screen) {
-                $screenImg.attr('src', $screen.find('img').attr('src'));
+            if (this) {
+                $screenImg.attr('src', this.find('img').attr('src'));
                 $('.features-section-box i').removeClass('red-text');
-                var box_num = $screen.find('img').attr('data-num');
+                var box_num = this.find('img').attr('data-num');
                 $('.features-section-box.' + box_num + ' i').addClass('red-text');
-                $screenTitle.text($screen.find('span').text());
+                $screenTitle.text(this.find('span').text());
             }
         }
 

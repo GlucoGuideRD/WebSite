@@ -1,0 +1,11 @@
+# iOS / Apple
+# ===========
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# IntelliJ
+# ========
+*.iml
+.idea/
