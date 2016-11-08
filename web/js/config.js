@@ -185,6 +185,10 @@ $(window).load(function () {
 
         function init() {
             $trigger.on('click', showGrid);
+            $screens.on('click',function(){
+                showScreen($(this));
+                return false;
+            });
             $screens.on('mouseover',function(){
                      // showScreen($(this));
                      setTimeout(showScreen.bind($(this)),1000);
