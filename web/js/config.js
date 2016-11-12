@@ -89,49 +89,49 @@ $(window).load(function () {
      * GOOGLE MAP INIT
      * ************************************************************** */
 
-    initMap();
+    // initMap();
 
-    function initMap() {
-        var mapOptions = {
-            zoom: 15,
-            scrollwheel: false,
-            // Add your location here.
-            center: new google.maps.LatLng(43.0143368, -81.2821288),
-            styles: [{"featureType": "landscape", "stylers": [{"saturation": -20}, {"lightness": 75}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": 0}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#00aeff"}, {"lightness": 25}]}]};
+    // function initMap() {
+    //     var mapOptions = {
+    //         zoom: 15,
+    //         scrollwheel: false,
+    //         // Add your location here.
+    //         center: new google.maps.LatLng(43.0143368, -81.2821288),
+    //         styles: [{"featureType": "landscape", "stylers": [{"saturation": -20}, {"lightness": 75}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": 0}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"color": "#00aeff"}, {"lightness": 25}]}]};
 
-        // Add your address here.
-        var contentString = "<div id='map-content'>"
-                + "<div class='address'>"
-                + "<p>999 Collip Cir, London, ON N6G 0J3</p>"
-                + "</div>"
-                + "</div>";
-        var infowindow = new google.maps.InfoWindow({content: contentString});
-        var mapElement = document.getElementById('map');
-        var map = new google.maps.Map(mapElement, mapOptions);
-        var icon = {
-            url: "img/marker.png",
-            scaledSize: new google.maps.Size(80, 80)
-        };
-        var marker = new google.maps.Marker({
-            // Add your location here.
-            position: new google.maps.LatLng(43.0143368, -81.2821288),
-            map: map,
-            icon: icon,
-            title: 'Location',
-            animation: google.maps.Animation.BOUNCE
-        });
-        marker.addListener('click', function () {
-            infowindow.open(map, marker);
-        });
-        google.maps.event.addListener(marker, 'click', toggleAnimation);
-        function toggleAnimation() {
-            if (marker.getAnimation() != null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-            }
-        }
-    }
+    //     // Add your address here.
+    //     var contentString = "<div id='map-content'>"
+    //             + "<div class='address'>"
+    //             + "<p>999 Collip Cir, London, ON N6G 0J3</p>"
+    //             + "</div>"
+    //             + "</div>";
+    //     var infowindow = new google.maps.InfoWindow({content: contentString});
+    //     var mapElement = document.getElementById('map');
+    //     var map = new google.maps.Map(mapElement, mapOptions);
+    //     var icon = {
+    //         url: "img/marker.png",
+    //         scaledSize: new google.maps.Size(80, 80)
+    //     };
+    //     var marker = new google.maps.Marker({
+    //         // Add your location here.
+    //         position: new google.maps.LatLng(43.0143368, -81.2821288),
+    //         map: map,
+    //         icon: icon,
+    //         title: 'Location',
+    //         animation: google.maps.Animation.BOUNCE
+    //     });
+    //     marker.addListener('click', function () {
+    //         infowindow.open(map, marker);
+    //     });
+    //     google.maps.event.addListener(marker, 'click', toggleAnimation);
+    //     function toggleAnimation() {
+    //         if (marker.getAnimation() != null) {
+    //             marker.setAnimation(null);
+    //         } else {
+    //             marker.setAnimation(google.maps.Animation.BOUNCE);
+    //         }
+    //     }
+    // }
 
 
     /* *****************************************************************
