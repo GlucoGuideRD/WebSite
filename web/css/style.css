@@ -124,6 +124,9 @@ section::before {
     line-height: 30px;
     margin-top: 5px;
 }
+.spacial-white-text{
+    font-size: 22px;
+}
 .overlay-shade {
     position: absolute;
     width: 100%;
