@@ -43,6 +43,7 @@ ul li{
 }
 .installul li{
 list-style-type:decimal	;
+
 }
 #tips li{
 	list-style-type:none;
@@ -70,4 +71,7 @@ list-style-type:decimal	;
 }
 .backindent{
     margin-right: 0px;
+}
+ul li{
+    padding: 10px;
 }
