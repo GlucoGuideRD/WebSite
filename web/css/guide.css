@@ -37,12 +37,12 @@
     height: 70px;
     line-height: 70px;
 }
-ul li{
+.collapsible-body li{
 	  
     list-style-type:square;
 }
 .installul li{
-list-style-type:decimal	;
+    list-style-type:decimal	;
 
 }
 #tips li{
