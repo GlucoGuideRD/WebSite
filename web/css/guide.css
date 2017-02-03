@@ -45,10 +45,15 @@
     list-style-type:decimal	;
 
 }
+.abcul li{
+    list-style-type: lower-alpha;
+}
 #tips li{
 	list-style-type:none;
 }
-
+.fbsize{
+    font-size: 20px;
+}
 .eula{
 	color:red;
 }
