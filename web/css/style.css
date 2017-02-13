@@ -481,7 +481,10 @@ section::before {
     overflow: visible;
 }
 .home-section::before {
-    background-image: url('../img/divider2.jpg');
+     background-image: url('../img/divider2.jpg') ;
+    background-size: cover;
+    background-position:top center;
+        
 }
 .hero-text {
     position: relative;
@@ -666,6 +669,11 @@ section::before {
         width: 40px;
         margin-left: 20px;
     }
+    .home-section::before {
+        
+        background-position:-250px ;
+ 
+    }
 }
 @media only screen and ( max-width:767px ) {
     .hero-text {
@@ -701,6 +709,11 @@ section::before {
     }
     .android-inner .flex-direction-nav .flex-prev {
         left: 0;
+    }
+    .home-section::before {
+        
+        background-position:-450px ;
+ 
     }
 }
 

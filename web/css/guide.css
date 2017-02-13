@@ -83,3 +83,17 @@ ul li{
 .hoverg:hover{
     background-color: #E8E8E8;
 }
+
+@media only screen and ( max-width:767px ) {
+  
+
+    .hero1-text h2 {
+ 
+        font-size: 28px;
+ 
+    }  
+    .home-section::before {
+ 
+    background-position:-100px ;
+    }   
+}
