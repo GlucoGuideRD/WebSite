@@ -95,6 +95,6 @@ ul li{
     .home-section::before {
          background-image: url('../img/divider2.jpg');
          background-size: cover;
-        background-position:-250px ;
+        background-position:-200px ;
     }   
 }
